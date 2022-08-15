@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pay Record Table View Controller-->
+        <scene sceneID="b7L-LI-vjD">
+            <objects>
+                <tableViewController storyboardIdentifier="PayRecordTableViewController" id="YP6-4v-wOE" customClass="PayRecordTableViewController" customModule="ZhudongParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QM8-X6-3cS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PayRecordTableViewCell" rowHeight="150" id="RSu-O7-eHN" customClass="PayRecordTableViewCell" customModule="ZhudongParking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSu-O7-eHN" id="bd1-Y0-3JR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0M-CF-83l">
+                                            <rect key="frame" x="20" y="11" width="374" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="繳費編號：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-3p-w5t">
+                                                    <rect key="frame" x="8" y="8" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="繳費狀態：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gni-Wi-Fwp">
+                                                    <rect key="frame" x="8" y="92" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="繳費金額：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-rZ-4rF">
+                                                    <rect key="frame" x="8" y="64" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="繳費日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i10-lr-JvA">
+                                                    <rect key="frame" x="8" y="36" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="202205260099" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-EU-sX5">
+                                                    <rect key="frame" x="85" y="8" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-05-26 10:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pp-hY-cdV">
+                                                    <rect key="frame" x="85" y="36" width="126" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ia-Yn-VHc">
+                                                    <rect key="frame" x="85" y="92" width="46" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-1u-ZV1">
+                                                    <rect key="frame" x="85" y="64" width="38" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="661-fK-I2X">
+                                                    <rect key="frame" x="280" y="90" width="86" height="30"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="   查看詳情   ">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="detailAction" destination="RSu-O7-eHN" eventType="touchUpInside" id="wrv-Do-3ev"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="jIA-EU-sX5" firstAttribute="centerY" secondItem="s6S-3p-w5t" secondAttribute="centerY" id="EHE-nq-PHT"/>
+                                                <constraint firstItem="IAz-1u-ZV1" firstAttribute="centerY" secondItem="3ed-rZ-4rF" secondAttribute="centerY" id="G8h-5X-AMQ"/>
+                                                <constraint firstItem="8Pp-hY-cdV" firstAttribute="leading" secondItem="i10-lr-JvA" secondAttribute="trailing" id="I68-2O-fe3"/>
+                                                <constraint firstItem="IAz-1u-ZV1" firstAttribute="leading" secondItem="3ed-rZ-4rF" secondAttribute="trailing" id="K1U-86-HJL"/>
+                                                <constraint firstItem="8Pp-hY-cdV" firstAttribute="centerY" secondItem="i10-lr-JvA" secondAttribute="centerY" id="MS5-2h-JnK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="661-fK-I2X" secondAttribute="trailing" id="MW0-ed-s92"/>
+                                                <constraint firstItem="gni-Wi-Fwp" firstAttribute="leading" secondItem="s6S-3p-w5t" secondAttribute="leading" id="Ow8-rU-fqj"/>
+                                                <constraint firstItem="jIA-EU-sX5" firstAttribute="leading" secondItem="s6S-3p-w5t" secondAttribute="trailing" id="R7g-E0-VOz"/>
+                                                <constraint firstItem="s6S-3p-w5t" firstAttribute="leading" secondItem="e0M-CF-83l" secondAttribute="leadingMargin" id="S4e-tz-g8u"/>
+                                                <constraint firstItem="8Ia-Yn-VHc" firstAttribute="leading" secondItem="gni-Wi-Fwp" secondAttribute="trailing" id="Wma-Gq-AWA"/>
+                                                <constraint firstItem="8Ia-Yn-VHc" firstAttribute="centerY" secondItem="gni-Wi-Fwp" secondAttribute="centerY" id="Wny-2d-7Hx"/>
+                                                <constraint firstItem="i10-lr-JvA" firstAttribute="top" secondItem="s6S-3p-w5t" secondAttribute="bottom" constant="10" id="Ymq-yg-y5G"/>
+                                                <constraint firstItem="i10-lr-JvA" firstAttribute="leading" secondItem="s6S-3p-w5t" secondAttribute="leading" id="b4T-t2-lW6"/>
+                                                <constraint firstItem="gni-Wi-Fwp" firstAttribute="top" secondItem="3ed-rZ-4rF" secondAttribute="bottom" constant="10" id="hKb-AP-FBi"/>
+                                                <constraint firstItem="3ed-rZ-4rF" firstAttribute="leading" secondItem="s6S-3p-w5t" secondAttribute="leading" id="hm4-uN-VZF"/>
+                                                <constraint firstItem="3ed-rZ-4rF" firstAttribute="top" secondItem="i10-lr-JvA" secondAttribute="bottom" constant="10" id="hyK-Vg-hEv"/>
+                                                <constraint firstItem="s6S-3p-w5t" firstAttribute="top" secondItem="e0M-CF-83l" secondAttribute="topMargin" id="wpv-iA-dd0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="661-fK-I2X" secondAttribute="bottom" id="xHp-wQ-SVe"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e0M-CF-83l" firstAttribute="leading" secondItem="bd1-Y0-3JR" secondAttribute="leadingMargin" id="2E9-zQ-PEN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="e0M-CF-83l" secondAttribute="trailing" id="4zP-am-aTc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="e0M-CF-83l" secondAttribute="bottom" id="FSZ-3R-ELF"/>
+                                        <constraint firstItem="e0M-CF-83l" firstAttribute="top" secondItem="bd1-Y0-3JR" secondAttribute="topMargin" id="IX6-gJ-Euq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="borderView" destination="e0M-CF-83l" id="xXL-qh-wCE"/>
+                                    <outlet property="detailButton" destination="661-fK-I2X" id="v1m-QV-shp"/>
+                                    <outlet property="payMoneyLabel" destination="IAz-1u-ZV1" id="5ad-zb-qvf"/>
+                                    <outlet property="payNoLabel" destination="jIA-EU-sX5" id="yK7-Z3-0AQ"/>
+                                    <outlet property="payStatusLabel" destination="8Ia-Yn-VHc" id="ZYL-mv-R8r"/>
+                                    <outlet property="timeLabel" destination="8Pp-hY-cdV" id="gJ6-6D-yxR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YP6-4v-wOE" id="tY9-GY-7zd"/>
+                            <outlet property="delegate" destination="YP6-4v-wOE" id="IRB-CI-cW7"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipj-mN-pZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

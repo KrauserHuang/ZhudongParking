@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Coupon Table View Controller-->
+        <scene sceneID="Dzk-R2-zgh">
+            <objects>
+                <tableViewController storyboardIdentifier="CouponTableViewController" id="Se8-rR-Kav" customClass="CouponTableViewController" customModule="Beipu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8eh-5l-Xio">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CouponTableViewCell" rowHeight="150" id="fN0-0O-xdY" customClass="CouponTableViewCell" customModule="Beipu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fN0-0O-xdY" id="6Uh-7X-KTY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTe-Pp-Eye">
+                                            <rect key="frame" x="25" y="16" width="364" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消費滿1000元可打9折" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-fg-A8N">
+                                                    <rect key="frame" x="20" y="20" width="202" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兌換期限：無期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUp-Aq-Ew0">
+                                                    <rect key="frame" x="20" y="87" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Hu4-fg-A8N" firstAttribute="leading" secondItem="bTe-Pp-Eye" secondAttribute="leading" constant="20" id="0bK-w1-nDf"/>
+                                                <constraint firstItem="Hu4-fg-A8N" firstAttribute="top" secondItem="bTe-Pp-Eye" secondAttribute="top" constant="20" id="fmb-R0-aXE"/>
+                                                <constraint firstAttribute="bottom" secondItem="fUp-Aq-Ew0" secondAttribute="bottom" constant="20" id="pug-rh-ylp"/>
+                                                <constraint firstItem="fUp-Aq-Ew0" firstAttribute="leading" secondItem="Hu4-fg-A8N" secondAttribute="leading" id="x1G-yp-rRE"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bTe-Pp-Eye" firstAttribute="leading" secondItem="6Uh-7X-KTY" secondAttribute="leadingMargin" constant="5" id="3OZ-BI-CYV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bTe-Pp-Eye" secondAttribute="trailing" constant="5" id="UlZ-jU-qft"/>
+                                        <constraint firstItem="bTe-Pp-Eye" firstAttribute="top" secondItem="6Uh-7X-KTY" secondAttribute="topMargin" constant="5" id="Wf9-HP-26t"/>
+                                        <constraint firstItem="bTe-Pp-Eye" firstAttribute="bottom" secondItem="6Uh-7X-KTY" secondAttribute="bottomMargin" constant="5" id="fL5-ur-8tw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="borderView" destination="bTe-Pp-Eye" id="vpn-0e-wq5"/>
+                                    <outlet property="descriptLabel" destination="Hu4-fg-A8N" id="Jcz-cZ-i67"/>
+                                    <outlet property="limitLabel" destination="fUp-Aq-Ew0" id="SOt-uc-ysG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Se8-rR-Kav" id="sua-fc-lmj"/>
+                            <outlet property="delegate" destination="Se8-rR-Kav" id="MAi-Jm-PCc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZ8-qs-gAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39.130434782608695" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

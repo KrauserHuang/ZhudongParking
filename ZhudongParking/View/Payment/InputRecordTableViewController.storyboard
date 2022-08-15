@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input Record Table View Controller-->
+        <scene sceneID="zla-MO-8iV">
+            <objects>
+                <tableViewController storyboardIdentifier="InputRecordTableViewController" id="TsC-pN-iEl" customClass="InputRecordTableViewController" customModule="ZhudongParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" estimatedRowHeight="90" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Mwi-h0-3UP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="gb5-7O-UrD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查詢記錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W9-I9-lIt">
+                                    <rect key="frame" x="28" y="11.5" width="70" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="7W9-I9-lIt" firstAttribute="centerY" secondItem="gb5-7O-UrD" secondAttribute="centerY" id="5Xy-mD-nL8"/>
+                                <constraint firstItem="7W9-I9-lIt" firstAttribute="leading" secondItem="gb5-7O-UrD" secondAttribute="leadingMargin" constant="20" id="t9h-j0-VK1"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="kfT-yr-hUX">
+                            <rect key="frame" x="0.0" y="201" width="414" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-Zn-p83">
+                                    <rect key="frame" x="141" y="5" width="132" height="60"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.0" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="5Mq-2f-Jeb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="查詢其他車牌">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="otherPlateAction:" destination="TsC-pN-iEl" eventType="touchUpInside" id="rKD-uo-9eN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="eKV-Zn-p83" firstAttribute="centerX" secondItem="kfT-yr-hUX" secondAttribute="centerX" id="BH9-A4-gOC"/>
+                                <constraint firstItem="eKV-Zn-p83" firstAttribute="width" secondItem="kfT-yr-hUX" secondAttribute="width" multiplier="0.32" id="Mbr-iX-HJH"/>
+                                <constraint firstItem="eKV-Zn-p83" firstAttribute="centerY" secondItem="kfT-yr-hUX" secondAttribute="centerY" id="N8w-do-LX0"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputRecordTableViewCell" rowHeight="90" id="KEH-Po-SBB" customClass="InputRecordTableViewCell" customModule="ZhudongParking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEH-Po-SBB" id="TW2-iU-ph8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-ch-Vfb">
+                                            <rect key="frame" x="20" y="11" width="374" height="68"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234-AA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8M-LJ-jyY">
+                                                    <rect key="frame" x="8" y="23.5" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2N-zF-mWZ">
+                                                    <rect key="frame" x="265" y="19" width="101" height="30"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="   查詢待繳費   ">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="queryAction:" destination="KEH-Po-SBB" eventType="touchUpInside" id="YdI-RL-1Az"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="C2N-zF-mWZ" secondAttribute="trailing" id="B71-wS-tcE"/>
+                                                <constraint firstItem="C2N-zF-mWZ" firstAttribute="centerY" secondItem="kbW-ch-Vfb" secondAttribute="centerY" id="jkJ-7M-gaD"/>
+                                                <constraint firstItem="o8M-LJ-jyY" firstAttribute="centerY" secondItem="kbW-ch-Vfb" secondAttribute="centerY" id="kZ5-jx-zVb"/>
+                                                <constraint firstItem="o8M-LJ-jyY" firstAttribute="leading" secondItem="kbW-ch-Vfb" secondAttribute="leadingMargin" id="nJh-SR-pcq"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kbW-ch-Vfb" secondAttribute="bottom" id="BTO-y3-Zfb"/>
+                                        <constraint firstItem="kbW-ch-Vfb" firstAttribute="leading" secondItem="TW2-iU-ph8" secondAttribute="leadingMargin" id="ghq-Ss-RDk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kbW-ch-Vfb" secondAttribute="trailing" id="rib-sB-ZcZ"/>
+                                        <constraint firstItem="kbW-ch-Vfb" firstAttribute="top" secondItem="TW2-iU-ph8" secondAttribute="topMargin" id="zPU-rA-eRc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="borderView" destination="kbW-ch-Vfb" id="BuW-ed-BmQ"/>
+                                    <outlet property="plateNoLabel" destination="o8M-LJ-jyY" id="9HQ-gG-5Bn"/>
+                                    <outlet property="queryButton" destination="C2N-zF-mWZ" id="R0f-Kl-CWt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TsC-pN-iEl" id="BE8-c9-obX"/>
+                            <outlet property="delegate" destination="TsC-pN-iEl" id="gqJ-oA-ASg"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="otherPlateButton" destination="eKV-Zn-p83" id="IF7-tv-5lz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zw-pl-xuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-30.133928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
