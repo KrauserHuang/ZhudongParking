@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmpwTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var ruleButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var agreeButton: UIButton!
@@ -72,11 +71,17 @@ class SignUpViewController: UIViewController {
         user.member_pwd = passwordTextField.text ?? ""
         user.member_name = nameTextField.text ?? ""
         user.member_email = emailTextField.text ?? ""
-        user.member_address = addressTextField.text ?? ""
         
         UserService.shared.signUp(user) { isSuccess, message in
             if isSuccess {
-                self.delegate?.signupAction(self, newUser: user)
+                // TODO: 沒解完
+//                self.couponAlert.showAlert(couponName: "哪來的coupon名稱",
+//                                           couponImage: "哪來的coupon照片",
+//                                           couponEndDate: "哪來的coupon期限",
+//                                           on: self)
+                Alert.showMessage(title: "獲得註冊優惠券", msg: "請至會員中心-優惠券查看", vc: self) {
+                    self.delegate?.signupAction(self, newUser: user)
+                }
             }else{
                 let alert = UIAlertController.simpleOKAlert(title: "註冊錯誤", message: message, buttonTitle: "確認", action: nil)
                 self.present(alert, animated: true)
@@ -89,6 +94,8 @@ class SignUpViewController: UIViewController {
     }
     
     weak var delegate: SignUpViewControllerDelegate?
+    private let couponAlert = CouponAlert()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBtnView()
@@ -97,7 +104,6 @@ class SignUpViewController: UIViewController {
         emailTextField.delegate = self
         phoneTextField.delegate = self
         passwordTextField.delegate = self
-        addressTextField.delegate = self
         setBorderView()
         agreeButton.setImage(UIImage(named: "check_icon_2"), for: .normal)
         agreeButton.setImage(UIImage(named: "check_icon"), for: .selected)
@@ -112,7 +118,6 @@ class SignUpViewController: UIViewController {
         emailTextField.setBottomBorder()
         phoneTextField.setBottomBorder()
         passwordTextField.setBottomBorder()
-        addressTextField.setBottomBorder()
     }
     
     func hideKeyBoard(){
@@ -138,7 +143,9 @@ class SignUpViewController: UIViewController {
         ruleButton.setAttributedTitle(attrString, for: .normal)
     }
     
-    
+    @objc func dismissAlert() {
+        couponAlert.dismissAlert()
+    }
 }
 
 extension SignUpViewController: UITextFieldDelegate {

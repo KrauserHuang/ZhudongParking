@@ -6,6 +6,10 @@ target 'ZhudongParking' do
   use_frameworks!
 
   # Pods for ZhudongParking
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SnapKit', '~> 5.6.0'
+  
 
   target 'ZhudongParkingTests' do
     inherit! :search_paths

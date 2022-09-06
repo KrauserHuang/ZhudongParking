@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="ZhudongParking" customModuleProvider="target">
             <connections>
-                <outlet property="addressTextField" destination="k9Q-NX-nz9" id="hrd-Bn-hK6"/>
                 <outlet property="agreeButton" destination="vL2-q7-yQS" id="8jv-Ps-vVJ"/>
                 <outlet property="borderView" destination="pUx-oc-xsa" id="Je8-As-6lG"/>
                 <outlet property="confirmpwTextField" destination="QHN-bZ-Z1b" id="2dj-lU-w5j"/>
@@ -33,10 +32,10 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maE-VE-Ubh">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="910"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="819.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUx-oc-xsa">
-                                    <rect key="frame" x="16" y="35" width="382" height="556.5"/>
+                                    <rect key="frame" x="16" y="35" width="382" height="466"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evL-dy-JRs">
                                             <rect key="frame" x="16" y="16" width="350" height="75.5"/>
@@ -153,48 +152,8 @@
                                                 <constraint firstItem="y00-JL-ZfD" firstAttribute="leading" secondItem="Wxl-VV-wmD" secondAttribute="leading" id="xUt-6p-4eO"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-Pj-t7y">
-                                            <rect key="frame" x="16" y="284.5" width="350" height="76.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLh-KY-2mj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  請輸入您的地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9Q-NX-nz9">
-                                                    <rect key="frame" x="0.0" y="22.5" width="350" height="52"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="52" id="Eqq-EG-GpA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGw-JO-8xY">
-                                                    <rect key="frame" x="0.0" y="74.5" width="350" height="2"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="2" id="UiO-FZ-Yht"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstItem="k9Q-NX-nz9" firstAttribute="top" secondItem="eLh-KY-2mj" secondAttribute="bottom" constant="2" id="3FU-gU-LOZ"/>
-                                                <constraint firstItem="k9Q-NX-nz9" firstAttribute="leading" secondItem="eLh-KY-2mj" secondAttribute="leading" id="3S8-9t-gBr"/>
-                                                <constraint firstItem="k9Q-NX-nz9" firstAttribute="top" secondItem="eLh-KY-2mj" secondAttribute="bottom" constant="2" id="Gn8-8M-nB0"/>
-                                                <constraint firstAttribute="trailing" secondItem="k9Q-NX-nz9" secondAttribute="trailing" id="HXz-rg-VcX"/>
-                                                <constraint firstAttribute="bottom" secondItem="eGw-JO-8xY" secondAttribute="bottom" id="UAU-fV-Y0q"/>
-                                                <constraint firstItem="eLh-KY-2mj" firstAttribute="leading" secondItem="y5Y-Pj-t7y" secondAttribute="leading" id="Yty-7G-sVH"/>
-                                                <constraint firstItem="k9Q-NX-nz9" firstAttribute="trailing" secondItem="eGw-JO-8xY" secondAttribute="trailing" id="f5F-fk-jly"/>
-                                                <constraint firstItem="eLh-KY-2mj" firstAttribute="top" secondItem="y5Y-Pj-t7y" secondAttribute="top" id="pg7-CO-n2P"/>
-                                                <constraint firstItem="eGw-JO-8xY" firstAttribute="top" secondItem="k9Q-NX-nz9" secondAttribute="bottom" id="qQv-f9-i8x"/>
-                                                <constraint firstAttribute="bottom" secondItem="k9Q-NX-nz9" secondAttribute="bottom" constant="2" id="uX9-3h-BVj"/>
-                                                <constraint firstItem="k9Q-NX-nz9" firstAttribute="leading" secondItem="eGw-JO-8xY" secondAttribute="leading" id="veR-yZ-asU"/>
-                                            </constraints>
-                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-wK-iFI">
-                                            <rect key="frame" x="16" y="465.5" width="350" height="77"/>
+                                            <rect key="frame" x="16" y="375" width="350" height="77"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgq-48-1Uu">
                                                     <rect key="frame" x="0.0" y="75" width="350" height="2"/>
@@ -246,7 +205,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdB-8H-py4">
-                                            <rect key="frame" x="16" y="375" width="350" height="76.5"/>
+                                            <rect key="frame" x="16" y="284.5" width="350" height="76.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0c-YQ-E1s">
                                                     <rect key="frame" x="0.0" y="74.5" width="350" height="2"/>
@@ -303,8 +262,6 @@
                                         <constraint firstItem="Xff-vk-64C" firstAttribute="leading" secondItem="pUx-oc-xsa" secondAttribute="leading" constant="16" id="59c-ic-AdN"/>
                                         <constraint firstItem="evL-dy-JRs" firstAttribute="top" secondItem="pUx-oc-xsa" secondAttribute="top" constant="16" id="7tH-hA-w52"/>
                                         <constraint firstItem="GWr-wK-iFI" firstAttribute="leading" secondItem="pUx-oc-xsa" secondAttribute="leading" constant="16" id="8yZ-RB-jnU"/>
-                                        <constraint firstItem="y5Y-Pj-t7y" firstAttribute="top" secondItem="Mws-X0-p8G" secondAttribute="bottom" constant="14" id="D7r-oc-OQP"/>
-                                        <constraint firstItem="y5Y-Pj-t7y" firstAttribute="leading" secondItem="pUx-oc-xsa" secondAttribute="leading" constant="16" id="EYL-db-HFL"/>
                                         <constraint firstItem="Xff-vk-64C" firstAttribute="centerX" secondItem="pUx-oc-xsa" secondAttribute="centerX" id="FZx-db-SdQ"/>
                                         <constraint firstItem="GWr-wK-iFI" firstAttribute="top" secondItem="xdB-8H-py4" secondAttribute="bottom" constant="14" id="I1M-u6-GKJ"/>
                                         <constraint firstItem="Mws-X0-p8G" firstAttribute="top" secondItem="Xff-vk-64C" secondAttribute="bottom" constant="14" id="KYG-IQ-8TW"/>
@@ -313,16 +270,15 @@
                                         <constraint firstItem="xdB-8H-py4" firstAttribute="leading" secondItem="pUx-oc-xsa" secondAttribute="leading" constant="16" id="eu7-gU-EjQ"/>
                                         <constraint firstItem="evL-dy-JRs" firstAttribute="leading" secondItem="pUx-oc-xsa" secondAttribute="leading" constant="16" id="hc6-7L-MzO"/>
                                         <constraint firstAttribute="bottom" secondItem="GWr-wK-iFI" secondAttribute="bottom" constant="14" id="iXZ-0k-eqD"/>
-                                        <constraint firstItem="y5Y-Pj-t7y" firstAttribute="centerX" secondItem="pUx-oc-xsa" secondAttribute="centerX" id="lT2-2K-8Lb"/>
-                                        <constraint firstItem="xdB-8H-py4" firstAttribute="top" secondItem="y5Y-Pj-t7y" secondAttribute="bottom" constant="14" id="piH-nC-wnw"/>
                                         <constraint firstItem="xdB-8H-py4" firstAttribute="centerX" secondItem="pUx-oc-xsa" secondAttribute="centerX" id="qMf-9W-udZ"/>
                                         <constraint firstItem="Mws-X0-p8G" firstAttribute="centerX" secondItem="pUx-oc-xsa" secondAttribute="centerX" id="sI8-eV-wSB"/>
+                                        <constraint firstItem="xdB-8H-py4" firstAttribute="top" secondItem="Mws-X0-p8G" secondAttribute="bottom" constant="14" id="twc-8v-Wo2"/>
                                         <constraint firstItem="Xff-vk-64C" firstAttribute="top" secondItem="evL-dy-JRs" secondAttribute="bottom" constant="14" id="vLe-FU-ckj"/>
                                         <constraint firstItem="GWr-wK-iFI" firstAttribute="centerX" secondItem="pUx-oc-xsa" secondAttribute="centerX" id="y5v-1s-BSZ"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" clipsSubviews="YES" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYF-rU-6Us">
-                                    <rect key="frame" x="141" y="708" width="132" height="52"/>
+                                    <rect key="frame" x="141" y="617.5" width="132" height="52"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="Yh8-aO-QDt"/>
@@ -336,7 +292,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc2-39-FUT">
-                                    <rect key="frame" x="70" y="627.5" width="274" height="50.5"/>
+                                    <rect key="frame" x="70" y="537" width="274" height="50.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我同意以此資料註冊會員，並同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-eU-zZX">
                                             <rect key="frame" x="29" y="3" width="245" height="19"/>

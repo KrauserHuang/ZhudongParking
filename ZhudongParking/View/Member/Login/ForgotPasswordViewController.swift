@@ -52,8 +52,9 @@ class ForgotPasswordViewController: UIViewController {
     }
     @IBAction func submitAction(_ sender: Any) {
         view.endEditing(true)
-        guard let code = verifyTextField.text, let pwd = passwordTextField.text, let confirmPwd = confirmpwTextField.text else {return}
-        guard code != "", phoneNumber != "", pwd != "", confirmPwd == pwd else {
+        guard let code = verifyTextField.text, let pwd = passwordTextField.text, let confirmPwd = confirmpwTextField.text, let phone = phoneTextField.text else {return}
+        phoneNumber = phone
+        guard phoneNumber != "", pwd != "", confirmPwd == pwd else {
             let alert = UIAlertController.simpleOKAlert(title: "欄位不能空白", message: "", buttonTitle: "確認", action: nil)
             present(alert, animated: true, completion: nil)
             return}

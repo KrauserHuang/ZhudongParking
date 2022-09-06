@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreImage.CIFilterBuiltins
 
 class CouponTableViewController: UITableViewController {
 
@@ -14,6 +15,8 @@ class CouponTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    private var couponAlert = CouponAlert()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,22 @@ class CouponTableViewController: UITableViewController {
 //        將畫面下拉補足tabbar標籤的空缺
         view.frame.origin = CGPoint(x: 0, y: 44)
         
+    }
+    
+    @objc func dismissAlert() {
+        couponAlert.dismissAlert()
+    }
+    
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+
+        if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
+            QRFilter.setValue(data, forKey: "inputMessage")
+
+            guard let QRImage = QRFilter.outputImage else { return nil }
+            return UIImage(ciImage: QRImage)
+        }
+        return nil
     }
     
 
@@ -43,6 +62,24 @@ class CouponTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let coupon = couponList[indexPath.row]
+        // TODO: couponImage怎麼轉成QRCode
+        if coupon.checkAvailable() == .Available {
+//            couponAlert.showAlert(title: "",
+//                                  couponName: coupon.coupon_name,
+//                                  couponImage: coupon.coupon_picture,
+//                                  couponEndDate: "使用期限：\(coupon.coupon_enddate)",
+//                                  buttonTitle: "OK",
+//                                  on: self)
+            let vc = CouponAlertViewController()
+            vc.coupon = coupon
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            present(vc, animated: true)
+        }
+    }
 }
 
 class CouponTableViewCell: UITableViewCell {
@@ -66,7 +103,8 @@ class CouponTableViewCell: UITableViewCell {
     }
     
     func setCouponView(){
-        descriptLabel?.text = coupon?.coupon_description
+//        descriptLabel?.text = coupon?.coupon_description
+        descriptLabel?.text = coupon?.coupon_name
         limitLabel?.text = "兌換期限：" + (coupon?.coupon_enddate ?? "無")
     }
 }

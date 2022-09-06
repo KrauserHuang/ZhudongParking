@@ -27,7 +27,9 @@ class OnTopTabBarController: UITabBarController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 //        設定tabbar位置
-        tabBar.frame = CGRect(x: 0, y: view.frame.origin.y, width: tabBar.frame.size.width, height: tabBar.frame.size.height)
+        print(self, #function)
+        print("tabBar height:\(tabBar.frame.size.height)")
+        tabBar.frame = CGRect(x: 0, y: view.frame.origin.y, width: tabBar.frame.size.width, height: tabBar.frame.size.height - 40)
         tabBar.backgroundColor = .white
     }
     

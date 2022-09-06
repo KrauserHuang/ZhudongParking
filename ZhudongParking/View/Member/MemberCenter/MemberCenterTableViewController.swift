@@ -13,6 +13,7 @@ protocol MemberCenterTableViewControllerDelegate: AnyObject {
     func userRuleAction(_ controller: MemberCenterTableViewController)
     func qnaAction(_ controller: MemberCenterTableViewController)
     func logoutAction(_ controller: MemberCenterTableViewController)
+    func accountDeletionAction(_ controller: MemberCenterTableViewController)
 }
 
 class MemberCenterTableViewController: UITableViewController {
@@ -61,6 +62,8 @@ class MemberCenterTableViewController: UITableViewController {
             delegate?.userRuleAction(self)
         case 5:
             delegate?.qnaAction(self)
+        case 6:
+            delegate?.accountDeletionAction(self)
         default:
             break
         }

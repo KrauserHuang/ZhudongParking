@@ -46,3 +46,6 @@ let URL_PAYBILLE = "pay_bill_E.php"
 
 //查詢縣政八街停車格
 let URL_PARKINGSPACESE = "parking_spaces_E.php"
+// MARK: - 店長
+//核銷票券
+let URL_APPLYCOUPON = "apply_coupon2.php"

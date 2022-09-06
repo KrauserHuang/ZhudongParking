@@ -10,6 +10,8 @@ import UIKit
 protocol LogInViewControllerDelegate: AnyObject {
 //    登入
     func loginAction(_ viewController: LogInViewController)
+    //店長登入
+    func adminLoginAction(_ viewController: LogInViewController)
 //    註冊
     func signupAction(_ viewController: LogInViewController)
 //    忘記密碼
@@ -34,15 +36,21 @@ class LogInViewController: UIViewController {
             present(alert, animated: true, completion: nil)
             return
         }
-        let predicate = NSPredicate(format: "SELF MATCHES %@", "^09[0-9]{8}$")
-        guard predicate.evaluate(with: accountTextField.text) else {
-            let alert = UIAlertController.simpleOKAlert(title: "帳號格式錯誤", message: "", buttonTitle: "確認", action: nil)
-            present(alert, animated: true, completion: nil)
-            return}
+//        let predicate = NSPredicate(format: "SELF MATCHES %@", "^09[0-9]{8}$")
+//        guard predicate.evaluate(with: accountTextField.text) else {
+//            let alert = UIAlertController.simpleOKAlert(title: "帳號格式錯誤", message: "", buttonTitle: "確認", action: nil)
+//            present(alert, animated: true, completion: nil)
+//            return}
         UserService.shared.autoLogin = autoButton.isSelected
         UserService.shared.logIn(account: accountTextField.text!, password: passwordField.text!) { isSuccess, message in
             if isSuccess {
-                self.delegate?.loginAction(self)
+                print(self, #function, "message:\(message)")
+                if message.hasPrefix("Store") {
+                    //代表是店長帳號登入成功
+                    self.delegate?.adminLoginAction(self)
+                } else {
+                    self.delegate?.loginAction(self)
+                }
             }else{
                 let alert = UIAlertController.simpleOKAlert(title: "登入錯誤", message: message, buttonTitle: "確認", action: nil)
                 self.present(alert, animated: true)

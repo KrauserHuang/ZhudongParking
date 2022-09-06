@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		0CF7E6CF7A24320B8FA4CB1B /* Pods_ZhudongParking_ZhudongParkingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AC1BF335791F276660DF6D /* Pods_ZhudongParking_ZhudongParkingUITests.framework */; };
 		3BA8C712F3CB74CB6E3172E8 /* Pods_ZhudongParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6FE4AADF3DD43A1CB79179 /* Pods_ZhudongParkingTests.framework */; };
+		4F1AC1A028ACEFDF001F2FFE /* AdminMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AC19E28ACEFDF001F2FFE /* AdminMainPageViewController.swift */; };
+		4F1AC1A128ACEFDF001F2FFE /* AdminMainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AC19F28ACEFDF001F2FFE /* AdminMainPageViewController.xib */; };
+		4F1AC1A428ACF23D001F2FFE /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AC1A228ACF23D001F2FFE /* QRScanViewController.swift */; };
+		4F1AC1A528ACF23D001F2FFE /* QRScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AC1A328ACF23D001F2FFE /* QRScanViewController.xib */; };
+		4F5BF0CB28BC932C00DC6774 /* CouponAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BF0C928BC932C00DC6774 /* CouponAlertViewController.swift */; };
+		4F5BF0CC28BC932C00DC6774 /* CouponAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5BF0CA28BC932C00DC6774 /* CouponAlertViewController.xib */; };
+		4F5CE64728ADD4C600595B41 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5CE64628ADD4C600595B41 /* ButtonFactory.swift */; };
+		4F5CE64928ADD94B00595B41 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5CE64828ADD94B00595B41 /* TitleLabel.swift */; };
+		4F5CE64B28ADDAC600595B41 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5CE64A28ADDAC600595B41 /* LabelFactory.swift */; };
+		4F5CE64D28ADEC2800595B41 /* AdminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5CE64C28ADEC2800595B41 /* AdminService.swift */; };
+		4F5D4AD028C04C2B001050A4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5D4ACF28C04C2B001050A4 /* UIColor+Extension.swift */; };
+		4F74094B28B873F700184AE0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74094A28B873F700184AE0 /* Date+Extension.swift */; };
+		4F7CC3A828AC98EC00C83A55 /* MainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CC3A628AC98EC00C83A55 /* MainPageCollectionViewCell.swift */; };
+		4F7CC3A928AC98EC00C83A55 /* MainPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7CC3A728AC98EC00C83A55 /* MainPageCollectionViewCell.xib */; };
+		4F91A36D28AF315F00461BA2 /* ParkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F91A36C28AF315F00461BA2 /* ParkService.swift */; };
+		4FCE3BD028B5F6700099E612 /* CouponAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE3BCF28B5F6700099E612 /* CouponAlert.swift */; };
 		54233BBE28A9E37800367F21 /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54233BBD28A9E37800367F21 /* TopModel.swift */; };
 		5428283D2881042400C5B8CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428283C2881042400C5B8CA /* AppDelegate.swift */; };
 		5428283F2881042400C5B8CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428283E2881042400C5B8CA /* SceneDelegate.swift */; };
@@ -89,6 +105,22 @@
 		20C0A28F01070A3BC5DC071E /* Pods-ZhudongParkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhudongParkingTests.release.xcconfig"; path = "Target Support Files/Pods-ZhudongParkingTests/Pods-ZhudongParkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A2DE705EAD2281398366B24 /* Pods-ZhudongParking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhudongParking.debug.xcconfig"; path = "Target Support Files/Pods-ZhudongParking/Pods-ZhudongParking.debug.xcconfig"; sourceTree = "<group>"; };
 		4D6FE4AADF3DD43A1CB79179 /* Pods_ZhudongParkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhudongParkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1AC19E28ACEFDF001F2FFE /* AdminMainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainPageViewController.swift; sourceTree = "<group>"; };
+		4F1AC19F28ACEFDF001F2FFE /* AdminMainPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminMainPageViewController.xib; sourceTree = "<group>"; };
+		4F1AC1A228ACF23D001F2FFE /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
+		4F1AC1A328ACF23D001F2FFE /* QRScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScanViewController.xib; sourceTree = "<group>"; };
+		4F5BF0C928BC932C00DC6774 /* CouponAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAlertViewController.swift; sourceTree = "<group>"; };
+		4F5BF0CA28BC932C00DC6774 /* CouponAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponAlertViewController.xib; sourceTree = "<group>"; };
+		4F5CE64628ADD4C600595B41 /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
+		4F5CE64828ADD94B00595B41 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		4F5CE64A28ADDAC600595B41 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		4F5CE64C28ADEC2800595B41 /* AdminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminService.swift; sourceTree = "<group>"; };
+		4F5D4ACF28C04C2B001050A4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4F74094A28B873F700184AE0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		4F7CC3A628AC98EC00C83A55 /* MainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F7CC3A728AC98EC00C83A55 /* MainPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPageCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F91A36C28AF315F00461BA2 /* ParkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkService.swift; sourceTree = "<group>"; };
+		4FCE3BCF28B5F6700099E612 /* CouponAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAlert.swift; sourceTree = "<group>"; };
 		54233BBD28A9E37800367F21 /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
 		542828392881042400C5B8CA /* ZhudongParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhudongParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5428283C2881042400C5B8CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +217,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1AC19D28ACEDC2001F2FFE /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				4F1AC19E28ACEFDF001F2FFE /* AdminMainPageViewController.swift */,
+				4F1AC19F28ACEFDF001F2FFE /* AdminMainPageViewController.xib */,
+				4F1AC1A228ACF23D001F2FFE /* QRScanViewController.swift */,
+				4F1AC1A328ACF23D001F2FFE /* QRScanViewController.xib */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		4F74094828B873D200184AE0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4F74094928B873D800184AE0 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4F74094928B873D800184AE0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F74094A28B873F700184AE0 /* Date+Extension.swift */,
+				4F5D4ACF28C04C2B001050A4 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4FCE3BCE28B5F6370099E612 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FCE3BCF28B5F6700099E612 /* CouponAlert.swift */,
+				4F5BF0C928BC932C00DC6774 /* CouponAlertViewController.swift */,
+				4F5BF0CA28BC932C00DC6774 /* CouponAlertViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		542828302881042400C5B8CA = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +280,7 @@
 		5428283B2881042400C5B8CA /* ZhudongParking */ = {
 			isa = PBXGroup;
 			children = (
+				4F74094828B873D200184AE0 /* Utils */,
 				54E5F9CE288134A500600088 /* Service */,
 				54E5F9C928811EF900600088 /* Custom */,
 				543C7C3D289392B0008B441E /* Model */,
@@ -263,6 +334,7 @@
 		54A809EB2881050500B25C4B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F1AC19D28ACEDC2001F2FFE /* Admin */,
 				54DDC1B7288559C800C173A7 /* Payment */,
 				54E5F9D12881378300600088 /* Member */,
 				54A809EC2881052E00B25C4B /* RootNavigationController.swift */,
@@ -270,6 +342,8 @@
 				54E5F9C628811B9500600088 /* TopPageViewController.xib */,
 				54E2120B2885357200213652 /* ParkingInfoTableViewController.swift */,
 				54E2120D2885358E00213652 /* ParkingInfoTableViewController.storyboard */,
+				4F7CC3A628AC98EC00C83A55 /* MainPageCollectionViewCell.swift */,
+				4F7CC3A728AC98EC00C83A55 /* MainPageCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,12 +373,16 @@
 		54E5F9C928811EF900600088 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				4FCE3BCE28B5F6370099E612 /* Views */,
 				54E5F9CA28811F1600600088 /* Extensions.swift */,
 				54E5F9CC28811F2600600088 /* Theme.swift */,
 				54D71FA928816A6300089A97 /* OnTopTabBarController.swift */,
 				543C7C3E2893A928008B441E /* LoadingView.swift */,
 				54E342F728A65133009DDB32 /* WKWebViewController.swift */,
 				54E342F628A65133009DDB32 /* WKWebViewController.xib */,
+				4F5CE64628ADD4C600595B41 /* ButtonFactory.swift */,
+				4F5CE64A28ADDAC600595B41 /* LabelFactory.swift */,
+				4F5CE64828ADD94B00595B41 /* TitleLabel.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -314,6 +392,8 @@
 			children = (
 				543C7C3628911F31008B441E /* API */,
 				54E5F9CF288134C600600088 /* UserService.swift */,
+				4F5CE64C28ADEC2800595B41 /* AdminService.swift */,
+				4F91A36C28AF315F00461BA2 /* ParkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -391,6 +471,7 @@
 				542828352881042400C5B8CA /* Sources */,
 				542828362881042400C5B8CA /* Frameworks */,
 				542828372881042400C5B8CA /* Resources */,
+				BEEC9F3B74D34F45214742FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +509,7 @@
 				542828552881042500C5B8CA /* Sources */,
 				542828562881042500C5B8CA /* Frameworks */,
 				542828572881042500C5B8CA /* Resources */,
+				E6DFC385010FEFBF837FE09C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -487,6 +569,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5BF0CC28BC932C00DC6774 /* CouponAlertViewController.xib in Resources */,
+				4F7CC3A928AC98EC00C83A55 /* MainPageCollectionViewCell.xib in Resources */,
 				542828492881042500C5B8CA /* LaunchScreen.storyboard in Resources */,
 				54E5F9EB28815E7E00600088 /* MemberCenterTableViewController.storyboard in Resources */,
 				54E5F9C828811B9500600088 /* TopPageViewController.xib in Resources */,
@@ -499,7 +583,9 @@
 				542A28CF2887A24D0015AE58 /* PayDetailViewController.xib in Resources */,
 				54DDC1BB28855C1C00C173A7 /* InputPlateViewController.xib in Resources */,
 				54DDC1C328856C7100C173A7 /* NeedPayTableViewController.storyboard in Resources */,
+				4F1AC1A528ACF23D001F2FFE /* QRScanViewController.xib in Resources */,
 				54E5F9DC288143D100600088 /* SignUpViewController.xib in Resources */,
+				4F1AC1A128ACEFDF001F2FFE /* AdminMainPageViewController.xib in Resources */,
 				54AD66D12886BB6B008BEA43 /* PayRecordTableViewController.storyboard in Resources */,
 				5435C64F28868CEF006E68D7 /* PaymentTypeSelectViewController.xib in Resources */,
 				54E342F828A65133009DDB32 /* WKWebViewController.xib in Resources */,
@@ -571,6 +657,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BEEC9F3B74D34F45214742FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking/Pods-ZhudongParking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking/Pods-ZhudongParking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking/Pods-ZhudongParking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C31F0BF8DCF09F2DB0681C96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +696,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6DFC385010FEFBF837FE09C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking-ZhudongParkingUITests/Pods-ZhudongParking-ZhudongParkingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking-ZhudongParkingUITests/Pods-ZhudongParking-ZhudongParkingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZhudongParking-ZhudongParkingUITests/Pods-ZhudongParking-ZhudongParkingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -600,12 +720,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1AC1A428ACF23D001F2FFE /* QRScanViewController.swift in Sources */,
+				4F74094B28B873F700184AE0 /* Date+Extension.swift in Sources */,
 				54E5F9D42881389900600088 /* LogInFlowViewController.swift in Sources */,
 				54E5F9D0288134C600600088 /* UserService.swift in Sources */,
 				54DDC1BA28855C1C00C173A7 /* InputPlateViewController.swift in Sources */,
 				54E5F9E3288146D400600088 /* ForgotPasswordViewController.swift in Sources */,
 				5435C64E28868CEF006E68D7 /* PaymentTypeSelectViewController.swift in Sources */,
 				54D71FA7288169DC00089A97 /* RuleTextViewController.swift in Sources */,
+				4F91A36D28AF315F00461BA2 /* ParkService.swift in Sources */,
 				54E5F9D728813EB100600088 /* LogInViewController.swift in Sources */,
 				54AD66CF2886BB5E008BEA43 /* PayRecordTableViewController.swift in Sources */,
 				543C7C412893BDFE008B441E /* PayRecordModel.swift in Sources */,
@@ -613,7 +736,9 @@
 				542A28CE2887A24D0015AE58 /* PayDetailViewController.swift in Sources */,
 				54E5F9CB28811F1600600088 /* Extensions.swift in Sources */,
 				54AD66CC2886A1B9008BEA43 /* PayResultViewController.swift in Sources */,
+				4F5D4AD028C04C2B001050A4 /* UIColor+Extension.swift in Sources */,
 				54E5F9DB288143D100600088 /* SignUpViewController.swift in Sources */,
+				4F5CE64928ADD94B00595B41 /* TitleLabel.swift in Sources */,
 				5428283D2881042400C5B8CA /* AppDelegate.swift in Sources */,
 				54E5F9C728811B9500600088 /* TopPageViewController.swift in Sources */,
 				54E5F9EE2881651400600088 /* MemberInfoViewController.swift in Sources */,
@@ -622,16 +747,23 @@
 				54E342F928A65133009DDB32 /* WKWebViewController.swift in Sources */,
 				54E5F9CD28811F2600600088 /* Theme.swift in Sources */,
 				54DDC1BD28856BFB00C173A7 /* InputRecordTableViewController.swift in Sources */,
+				4F5CE64B28ADDAC600595B41 /* LabelFactory.swift in Sources */,
 				54DDC1C128856C6800C173A7 /* NeedPayTableViewController.swift in Sources */,
 				5428283F2881042400C5B8CA /* SceneDelegate.swift in Sources */,
 				543C7C3C28938ADE008B441E /* CouponModel.swift in Sources */,
 				54233BBE28A9E37800367F21 /* TopModel.swift in Sources */,
+				4F5CE64728ADD4C600595B41 /* ButtonFactory.swift in Sources */,
+				4F7CC3A828AC98EC00C83A55 /* MainPageCollectionViewCell.swift in Sources */,
+				4F5BF0CB28BC932C00DC6774 /* CouponAlertViewController.swift in Sources */,
+				4F5CE64D28ADEC2800595B41 /* AdminService.swift in Sources */,
 				543C7C3F2893A928008B441E /* LoadingView.swift in Sources */,
+				4FCE3BD028B5F6700099E612 /* CouponAlert.swift in Sources */,
 				54D71FA2288167C900089A97 /* CouponTableViewController.swift in Sources */,
 				543C7C3828911F31008B441E /* WebAPI.swift in Sources */,
 				54E2120C2885357200213652 /* ParkingInfoTableViewController.swift in Sources */,
 				54A809ED2881052E00B25C4B /* RootNavigationController.swift in Sources */,
 				54D71FAA28816A6300089A97 /* OnTopTabBarController.swift in Sources */,
+				4F1AC1A028ACEFDF001F2FFE /* AdminMainPageViewController.swift in Sources */,
 				54E5F9E728815DB300600088 /* MemberCenterFlowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,11 +941,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = RV8U4Q9DP5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZhudongParking/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "竹東停車幫幫忙";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -840,11 +973,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = RV8U4Q9DP5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZhudongParking/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "竹東停車幫幫忙";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning QR code";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -8,6 +8,7 @@
 import UIKit
 protocol LogInFlowViewControllerDelegate: AnyObject {
     func loginAction(_ viewController: LogInFlowViewController)
+    func adminLoginAction(_ viewController: LogInFlowViewController)
 }
 
 class LogInFlowViewController: UIViewController {
@@ -46,6 +47,10 @@ class LogInFlowViewController: UIViewController {
 }
 
 extension LogInFlowViewController: LogInViewControllerDelegate {
+    func adminLoginAction(_ viewController: LogInViewController) {
+        delegate?.adminLoginAction(self)
+    }
+    
     func loginAction(_ viewController: LogInViewController) {
         delegate?.loginAction(self)
     }

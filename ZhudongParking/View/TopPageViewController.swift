@@ -11,7 +11,46 @@ protocol TopPageViewControllerDelegate: AnyObject {
     func parkingAction(_ viewController: TopPageViewController)
 }
 
+enum MainPageItem {
+    case payForParking
+    case parkingInfo
+    case toBeipu
+    case toHealthManagement
+}
+
+extension MainPageItem: CaseIterable {
+    var imageName: String {
+        switch self {
+        case .payForParking: return "payment"
+        case .parkingInfo: return "park"
+        case .toBeipu: return "cart"
+        case .toHealthManagement: return "health"
+        }
+    }
+    var title: String {
+        switch self {
+        case .payForParking: return "停車繳費"
+        case .parkingInfo: return "停車資訊"
+        case .toBeipu: return "在地好康"
+        case .toHealthManagement: return "健康速檢"
+        }
+    }
+    var backgroundColor: UIColor {
+        switch self {
+        case .payForParking:
+            return UIColor.convertHexStringToUIColor(hexString: "81D3F8")
+        case .parkingInfo:
+            return UIColor.convertHexStringToUIColor(hexString: "FF7878")
+        case .toBeipu:
+            return UIColor.convertHexStringToUIColor(hexString: "D3A4FF")
+        case .toHealthManagement:
+            return UIColor.convertHexStringToUIColor(hexString: "FFB326")
+        }
+    }
+}
+
 class TopPageViewController: UIViewController {
+    
     @IBOutlet weak var bannerScrollView: UIScrollView!
     @IBOutlet weak var bannerStack: UIStackView!
     @IBOutlet weak var bannerPageControl: UIPageControl!
@@ -19,30 +58,6 @@ class TopPageViewController: UIViewController {
     @IBAction func bannerPageChangeAction(_ sender: UIPageControl) {
         let point = CGPoint(x: bannerScrollView.bounds.width * CGFloat(sender.currentPage), y: 0)
         bannerScrollView.setContentOffset(point, animated: true)
-    }
-    @IBAction func payAction(_ sender: Any) {
-        delegate?.payAction(self)
-    }
-    @IBAction func shopAction(_ sender: Any) {
-        let schemeStr = "beipu://"
-        let urlStr = "https://apps.apple.com/app/id1636198260"
-        if let url = URL(string: schemeStr), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        }else if let url = URL(string: urlStr){
-            UIApplication.shared.open(url)
-        }
-    }
-    @IBAction func parkingAction(_ sender: Any) {
-        delegate?.parkingAction(self)
-    }
-    @IBAction func healthAction(_ sender: Any) {
-        let schemeStr = "healthmanage://"
-        let urlStr = "https://apps.apple.com/app/id1610454916"
-        if let url = URL(string: schemeStr), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        }else if let url = URL(string: urlStr){
-            UIApplication.shared.open(url)
-        }
     }
 
     weak var delegate: TopPageViewControllerDelegate?
@@ -55,6 +70,23 @@ class TopPageViewController: UIViewController {
             }
         }
     }
+    enum Section {
+        case all
+    }
+    
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, MainPageItem>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, MainPageItem>
+    
+    private lazy var dataSource = configureDataSource()
+    
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createGridLayout())
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: MainPageCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: MainPageCollectionViewCell.reuseIdentifier)
+        return collectionView
+    }()
+    
+    let mainPageItems = MainPageItem.allCases
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +95,7 @@ class TopPageViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(scroll), userInfo: nil, repeats: true)
         bannerScrollView.delegate = self
         fetchBanner()
+        configureCollectionView()
     }
     
     @objc func scroll(){
@@ -119,5 +152,87 @@ extension TopPageViewController: UIScrollViewDelegate {
 //        設定拖曳輪播頁面時更新小圓點
         let page = scrollView.contentOffset.x / scrollView.bounds.width
         bannerPageControl.currentPage = Int(page)
+    }
+}
+extension TopPageViewController {
+    func configureCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.anchor(top: bannerScrollView.bottomAnchor,
+                              left: view.leftAnchor,
+                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              right: view.rightAnchor)
+        collectionView.dataSource = dataSource
+        updateSnapshot()
+        collectionView.isScrollEnabled = false
+    }
+    func configureDataSource() -> DataSource {
+        let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPageCollectionViewCell.reuseIdentifier, for: indexPath) as! MainPageCollectionViewCell
+            
+            print(self, #function)
+            print(itemIdentifier)
+            cell.configure(with: itemIdentifier)
+            
+            return cell
+        }
+        return dataSource
+    }
+    func updateSnapshot(animatingChange: Bool = false) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.all])
+        snapshot.appendItems(mainPageItems, toSection: .all)
+        
+        dataSource.apply(snapshot, animatingDifferences: false, completion: nil)
+    }
+    func createGridLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                              heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//        item.contentInsets = NSDirectionalEdgeInsets(top: 5,
+//                                                     leading: 5,
+//                                                     bottom: 5,
+//                                                     trailing: 5)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                               heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitem: item,
+                                                       count: 2)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+}
+// MARK: - UICollectionViewDelegate
+extension TopPageViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
+        
+        switch item {
+        case .payForParking:
+            delegate?.payAction(self)
+        case .parkingInfo:
+            delegate?.parkingAction(self)
+        case .toBeipu:
+//            let schemeStr = "beipu://"
+//            let urlStr = "https://apps.apple.com/app/id1636198260"
+//            if let url = URL(string: schemeStr), UIApplication.shared.canOpenURL(url) { //跳轉app
+//                UIApplication.shared.open(url)
+//            } else if let url = URL(string: urlStr) { //跳轉App Store
+//                UIApplication.shared.open(url)
+//            }
+            let vc = WKWebViewController()
+            vc.urlStr = "https://hcparking.jotangi.net/parking_web/index.php"
+            vc.setNavigationTitle("在地好康")
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .toHealthManagement:
+            let schemeStr = "healthmanage://"
+            let urlStr = "https://apps.apple.com/app/id1610454916"
+            if let url = URL(string: schemeStr), UIApplication.shared.canOpenURL(url) { //跳轉app
+                UIApplication.shared.open(url)
+            } else if let url = URL(string: urlStr) { //跳轉App Store
+                UIApplication.shared.open(url)
+            }
+        }
     }
 }

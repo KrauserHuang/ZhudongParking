@@ -54,13 +54,18 @@ class Coupon {
         
     }
 //    檢查coupon的可用性
+    /*
+     using_flag -> 看是否可以兌換；0(可兌換)\1(已兌換)
+     */
     func checkAvailable()->CouponStatus {
         if self.using_flag == "1" {
             return .Used
         }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let start = dateFormatter.date(from: self.coupon_startdate)
+//        let start = dateFormatter.date(from: self.coupon_startdate)
+        print(coupon_startdate)
+        let start = dateFormatter.date(from: Date().longDate())
         var end = dateFormatter.date(from: self.coupon_enddate)
         end?.addTimeInterval(60*60*24-1)
         if let start = start, let end = end, Date() < start || Date() > end {

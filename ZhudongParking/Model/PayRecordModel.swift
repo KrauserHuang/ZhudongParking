@@ -27,20 +27,20 @@ class PayRecord {
     init(from dict: [String:Any]){
         let temp = dict.castToStrStr()
         
-        bid = temp["bid"] ?? ""
-        bill_no = temp["bill_no"] ?? ""
-        bill_date = temp["bill_date"] ?? ""
-        store_id = temp["store_id"] ?? ""
-        member_id = temp["member_id"] ?? ""
-        coupon_no = temp["coupon_no"] ?? ""
+        bid             = temp["bid"] ?? ""
+        bill_no         = temp["bill_no"] ?? ""
+        bill_date       = temp["bill_date"] ?? ""
+        store_id        = temp["store_id"] ?? ""
+        member_id       = temp["member_id"] ?? ""
+        coupon_no       = temp["coupon_no"] ?? ""
         discount_amount = temp["discount_amount"] ?? ""
-        bill_pay = temp["bill_pay"] ?? ""
-        bonus_point = temp["bonus_point"] ?? ""
-        bill_status = temp["bill_status"] ?? ""
+        bill_pay        = temp["bill_pay"] ?? ""
+        bonus_point     = temp["bonus_point"] ?? ""
+        bill_status     = temp["bill_status"] ?? ""
         bill_updated_at = temp["bill_updated_at"] ?? ""
-        bill_amount = temp["bill_amount"] ?? ""
-        plateNo = temp["plateNo"] ?? ""
-        pay_status = (temp["pay_status"] == "1") ? "已繳費" : "未繳費"
+        bill_amount     = temp["bill_amount"] ?? ""
+        plateNo         = temp["plateNo"] ?? ""
+        pay_status      = (temp["pay_status"] == "1") ? "已繳費" : "未繳費"
         
         let pay_type = temp["pay_type"] ?? ""
         switch pay_type {

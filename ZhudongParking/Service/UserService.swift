@@ -143,7 +143,21 @@ class UserService {
                 UserDefaults.standard.set(account, forKey: "account")
                 UserDefaults.standard.set(password, forKey: "password")
                 self.loadUser(id: account, pw: password)
-                self.renewUser = { completion(isSuccess, "") }
+                if let data = data,
+                   let results = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any],
+                   let msg = results["responseMessage"] as? String {
+                    if msg == "Store login success!" {
+                        self.renewUser = { completion(isSuccess, msg) }
+                    } else {
+                        self.renewUser = { completion(isSuccess, "") }
+                    }
+                    print(#function)
+                    print("responseMessage:\(msg)")
+                }
+//                UserDefaults.standard.set(account, forKey: "account")
+//                UserDefaults.standard.set(password, forKey: "password")
+//                self.loadUser(id: account, pw: password)
+//                self.renewUser = { completion(isSuccess, "") }
                 return
             }
             var errorMsg = ""
@@ -209,5 +223,16 @@ class UserService {
         }
     }
     
+    func userChangePassword(_ oldUser: User, newPassword: String, completion: @escaping (Bool)->()) {
+        guard let user = user else { return }
+        let url = API_URL + URL_USERCHANGEPWD
+        let parameter = "member_id=\(user.member_id)&" + "new_password=\(newPassword)"
+        WebAPI.shared.request(urlString: url, parameters: parameter) { isSuccess, data, error in
+            if isSuccess {
+                self.loadUser(id: user.member_id, pw: newPassword)
+            }
+            completion(isSuccess)
+        }
+    }
 }
 

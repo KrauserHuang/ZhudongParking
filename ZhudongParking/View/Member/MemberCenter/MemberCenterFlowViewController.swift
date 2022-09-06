@@ -120,6 +120,12 @@ extension MemberCenterFlowViewController: MemberCenterTableViewControllerDelegat
     func logoutAction(_ controller: MemberCenterTableViewController) {
         delegate?.logoutAction(self)
     }
+    
+    func accountDeletionAction(_ controller: MemberCenterTableViewController) {
+        Alert.showMessage(title: "注意", msg: "我們將刪除您的帳號", vc: controller) {
+            self.delegate?.logoutAction(self)
+        }
+    }
 }
 
 extension MemberCenterFlowViewController: PayRecordTableViewControllerDelegate {
